@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftSectionComponent } from './left-section/left-section.component';
 import { QuoteComponent } from './quote/quote.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { QuoteComponent } from './quote/quote.component';
     FormComponent,
     HeaderComponent,
     LeftSectionComponent,
-    QuoteComponent
+    QuoteComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
