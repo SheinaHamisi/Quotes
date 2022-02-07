@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { LeftSectionComponent } from './left-section/left-section.component';
 import { QuoteComponent } from './quote/quote.component';
 import { DateCountPipe } from './date-count.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { DateCountPipe } from './date-count.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
