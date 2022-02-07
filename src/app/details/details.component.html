@@ -1,1 +1,42 @@
-<p>details works!</p>
+<p> {{author.author}} </p>
+<p id="contributor">Submitted by {{author.contributor}} on {{author.submittedDate|date}}({{author.submittedDate|dateCount}} day(s) ago) </p>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-7"></div>
+        <div class="col-md-5">
+            <div class="container-fluid buttons-container">
+                <div class="row buttons">
+                    <!-- delete -->
+                    <div class="col-md-5">
+                        <!-- button -->
+                        <div class="container-fluid delete" (click)='deleteCard(true)'>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img [src]="deleteImagePath" alt="delete">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- like/dislike -->
+                    <div class="col-md-7">
+                        <div class="container-fluid like-dislike">
+                            <div class="row">
+                                <!-- like -->
+                                <div class="col-md-6" id="like">
+                                    <img [src]="increaseLikesPath" alt="like" (click)='increaseLikes(true)' appHighlight>
+                                    <p> {{author.upvote}} </p>
+                                </div>
+                                <!-- dislike -->
+                                <div class="col-md-6" id="dislike" (click)='decreaseLikes()'>
+                                    <img [src]="decreaseLikesPath" alt="dislike">
+                                    <p> {{dislike}} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

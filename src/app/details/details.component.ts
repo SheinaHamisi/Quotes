@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+
+import { Quotes } from './../quotes';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-details',
@@ -7,7 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
+  @Input() author: Quotes;
+  @Output() isToDelete = new EventEmitter<boolean>();
+  @Output() toIncreaseLikes = new EventEmitter<boolean>();
+
+  deleteImagePath = "./assets/Images/delete.png";
+  increaseLikesPath = "./assets/Images/like.png";
+  decreaseLikesPath = "./assets/Images/dislike.png";
+
+  deleteCard(deleteNow: boolean){
+    this.isToDelete.emit(deleteNow);
+  }
+
+  increaseLikes(increase: boolean){
+    this.toIncreaseLikes.emit(increase);
+  }
+
   constructor() { }
+
+ // like: number = 0;
+ dislike: number = 0;
+
+ decreaseLikes(){
+   return this.dislike++;
+ }
 
   ngOnInit(): void {
   }
