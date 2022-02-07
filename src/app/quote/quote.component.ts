@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   quotes:Quotes[] = [
-    new Quotes("When something is important enough, you do it even if the odds are not in your favor.", "Elon Musk", "Sheina", new Date(2022, 4, 1))
+    new Quotes("When something is important enough, you do it even if the odds are not in your favor.", "Elon Musk", "Sheina", new Date(2022, 1, 1))
   ]
 
 
